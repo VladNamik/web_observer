@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?language javascript?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<VBox fx:controller="ui.AddObservablePageDialogController" xmlns:fx="http://javafx.com/fxml">
+    <HBox>
+        <Text text="Вставьте ссылку:"/>
+        <TextField fx:id="textFieldURL" promptText="http://example.com/"/>
+    </HBox>
+    <HBox>
+        <Text text="Способ загрузки:"/>
+        <RadioButton fx:id="radioButtonStatic" text="Статический" selected="true"/>
+        <RadioButton fx:id="radioButtonDynamic" text="Динамический"/>
+    </HBox>
+    <HBox>
+        <Button text="Принять" onAction="#onOKButton"/>
+        <Button text="Отмена" onAction="#onCancelButton"/>
+    </HBox>
+</VBox>
