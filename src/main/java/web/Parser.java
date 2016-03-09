@@ -95,7 +95,7 @@ public class Parser {
     {
         if (observablePageList.contains(page))
             observablePageList.remove(page);
-        fsHelper.delete(page.getTitle());
+        fsHelper.delete(page.getUrl());
         saveConfigChanges();
     }
 }

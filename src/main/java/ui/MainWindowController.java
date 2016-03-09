@@ -91,7 +91,20 @@ public class MainWindowController {
                     alert.showAndWait();
                     endUpdating("Updating have been failed");
                 });
-            }}
+            }
+            catch (NullPointerException e)
+            {
+                Platform.runLater(() -> {
+                    Alert alert = new Alert(Alert.AlertType.WARNING);
+                    alert.setTitle("Ошибка в данных");
+                    alert.setHeaderText("Ошибка в данных");
+                    alert.setContentText("Убедитесь, что все данные для элементов введены правильно");
+
+                    alert.showAndWait();
+                    endUpdating("Updating have been failed");
+                });
+            }
+        }
         ).start();
     }
 
