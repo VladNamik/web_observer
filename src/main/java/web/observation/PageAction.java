@@ -19,7 +19,7 @@ public class PageAction
         this.typeValue = typeValue;
     }
 
-    Element action(Element element) throws NullPointerException
+    public Element action(Element element) throws NullPointerException
     {
         switch(type)
         {

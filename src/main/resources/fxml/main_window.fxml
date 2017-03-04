@@ -14,10 +14,14 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.text.Text?>
-<BorderPane fx:controller="ui.MainWindowController" xmlns:fx="http://javafx.com/fxml">
+<?import java.net.URL?>
+<BorderPane fx:controller="ui.MainWindowController" xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: rgb(255, 103, 0)">
+    <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
     <top>
         <VBox>
-            <MenuBar>
+            <MenuBar >
                 <Menu text="Элементы">
                     <MenuItem text = "Добавить объект" onAction="#onAddButtonClick"/>
                     <SeparatorMenuItem/>
@@ -60,8 +64,8 @@
         </VBox>
     </top>
     <center>
-        <ScrollPane fitToWidth="true" fitToHeight="true">
-            <ListView fx:id="mainList" />
+        <ScrollPane fitToWidth="true" fitToHeight="true" >
+            <ListView fx:id="mainList"/>
         </ScrollPane>
     </center>
     <bottom>

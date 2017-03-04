@@ -156,6 +156,7 @@ public class MainWindowController {
         catch (IOException e)
         {
             bottomText.setText("Can't open observers window");
+            e.printStackTrace();
         }
     }
 

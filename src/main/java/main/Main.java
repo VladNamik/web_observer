@@ -11,9 +11,9 @@ import web.observation.PageAction;
 
 import java.io.IOException;
 
-public class Main{
+public class Main {
 
-    public static void main(String[] args) throws IOException, InterruptedException{
+    public static void main(String[] args) throws IOException, InterruptedException {
         Parser parser = Parser.getInstance();
 //        String[] strings = {"http://amovies.org/serials/3717-legendy-zavtrashnego-dnya.html",
 //                "http://amovies.org/serials/3498-lyuter.html",
@@ -34,7 +34,7 @@ public class Main{
 //            page.addAction(new PageAction(PageAction.PageActionType.CLASS, "arhive_news"));
 //            parser.savePage(page);
 //        }
-         parser.checkAllPages();
+        parser.checkAllPages();
         for (ObservablePage page : parser.getObservablePageList())
             if (page.isChanged())
                 System.out.println(page.getUrl());

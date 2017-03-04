@@ -52,10 +52,6 @@ public class ObserversWindowController {
     private ObservableList<ActionsListItem> actionsList = FXCollections.observableArrayList();
 
 
-
-
-
-
     public ObserversWindowController()
     {
 
@@ -69,7 +65,11 @@ public class ObserversWindowController {
 
         actionsListView.setItems(actionsList);
 
-        setCurrentObservablePage(parser.getObservablePageList().get(0));
+        if (parser.getObservablePageList().size() > 0) {
+            setCurrentObservablePage(parser.getObservablePageList().get(0));
+        } else {
+            setCurrentObservablePage(null);
+        }
         if (observableListSize != 0)
             observersListView.getSelectionModel().select(observersListView.getItems().get(0));
 
